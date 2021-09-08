@@ -99,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Plugin\libs\Ionic.Zip.Unity.dll" />
+    <Content Include="Resources\Image\refresh.jpg" />
     <Content Include="Resources\Image\Unity.ico" />
     <Content Include="Resources\Image\Unity.png" />
     <Content Include="Resources\Image\UnityIcon.png" />
