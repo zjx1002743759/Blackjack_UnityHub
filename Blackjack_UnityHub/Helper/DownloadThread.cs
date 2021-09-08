@@ -112,6 +112,7 @@
                     // 通知主界面我已经完成了
                     this.EventDownloadDoneEventHandler();
                 }
+                this.EventDownloadDoneEventHandler();
             }
             catch (Exception)
             {

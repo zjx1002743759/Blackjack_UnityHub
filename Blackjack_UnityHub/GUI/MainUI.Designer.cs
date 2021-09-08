@@ -33,8 +33,10 @@ namespace Blackjack_UnityHub.GUI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainUI));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.processLbl = new System.Windows.Forms.Label();
+            this.tipsLbl = new System.Windows.Forms.Label();
             this.Btn_Downlaod = new System.Windows.Forms.Button();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
             this.ucListView1 = new HZH_Controls.Controls.UCListView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.下载ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,8 +59,10 @@ namespace Blackjack_UnityHub.GUI
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.processLbl);
+            this.splitContainer1.Panel2.Controls.Add(this.tipsLbl);
             this.splitContainer1.Panel2.Controls.Add(this.Btn_Downlaod);
-            this.splitContainer1.Panel2.Controls.Add(this.progressBar1);
+            this.splitContainer1.Panel2.Controls.Add(this.progressBar);
             this.splitContainer1.Panel2.Controls.Add(this.ucListView1);
             this.splitContainer1.Size = new System.Drawing.Size(800, 457);
             this.splitContainer1.SplitterDistance = 179;
@@ -78,6 +82,24 @@ namespace Blackjack_UnityHub.GUI
             this.listView1.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.listView1_ColumnClick);
             this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseClick);
             // 
+            // processLbl
+            // 
+            this.processLbl.AutoSize = true;
+            this.processLbl.Location = new System.Drawing.Point(379, 387);
+            this.processLbl.Name = "processLbl";
+            this.processLbl.Size = new System.Drawing.Size(23, 12);
+            this.processLbl.TabIndex = 6;
+            this.processLbl.Text = "00%";
+            // 
+            // tipsLbl
+            // 
+            this.tipsLbl.AutoSize = true;
+            this.tipsLbl.Location = new System.Drawing.Point(236, 387);
+            this.tipsLbl.Name = "tipsLbl";
+            this.tipsLbl.Size = new System.Drawing.Size(137, 12);
+            this.tipsLbl.TabIndex = 5;
+            this.tipsLbl.Text = "正在下载中，请耐心等候";
+            // 
             // Btn_Downlaod
             // 
             this.Btn_Downlaod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
@@ -89,13 +111,14 @@ namespace Blackjack_UnityHub.GUI
             this.Btn_Downlaod.TabIndex = 4;
             this.Btn_Downlaod.Text = "Downlaod";
             this.Btn_Downlaod.UseVisualStyleBackColor = false;
+            this.Btn_Downlaod.Click += new System.EventHandler(this.Btn_Downlaod_Click);
             // 
-            // progressBar1
+            // progressBar
             // 
-            this.progressBar1.Location = new System.Drawing.Point(0, 405);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(617, 11);
-            this.progressBar1.TabIndex = 1;
+            this.progressBar.Location = new System.Drawing.Point(0, 405);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(617, 11);
+            this.progressBar.TabIndex = 1;
             // 
             // ucListView1
             // 
@@ -139,6 +162,7 @@ namespace Blackjack_UnityHub.GUI
             this.Load += new System.EventHandler(this.MainUI_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
@@ -151,9 +175,11 @@ namespace Blackjack_UnityHub.GUI
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.ListView listView1;
         private HZH_Controls.Controls.UCListView ucListView1;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 下载ToolStripMenuItem;
         private System.Windows.Forms.Button Btn_Downlaod;
+        private System.Windows.Forms.Label tipsLbl;
+        private System.Windows.Forms.Label processLbl;
     }
 }
