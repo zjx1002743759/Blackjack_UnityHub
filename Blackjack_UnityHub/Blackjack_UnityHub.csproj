@@ -77,6 +77,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include=".editorconfig" />
     <None Include="packages.config" />
@@ -99,6 +100,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Plugin\libs\Ionic.Zip.Unity.dll" />
+    <None Include="Resources\Exit.png" />
+    <Content Include="Resources\Image\favicon.ico" />
     <Content Include="Resources\Image\refresh.jpg" />
     <Content Include="Resources\Image\Unity.ico" />
     <Content Include="Resources\Image\Unity.png" />

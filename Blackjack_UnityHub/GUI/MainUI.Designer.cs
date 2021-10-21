@@ -40,11 +40,15 @@ namespace Blackjack_UnityHub.GUI
             this.ucListView1 = new HZH_Controls.Controls.UCListView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.下载ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.UnitynotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.ToolcontextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
+            this.ToolcontextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -150,6 +154,29 @@ namespace Blackjack_UnityHub.GUI
             this.下载ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.下载ToolStripMenuItem.Text = "下载";
             // 
+            // UnitynotifyIcon
+            // 
+            this.UnitynotifyIcon.ContextMenuStrip = this.ToolcontextMenuStrip;
+            this.UnitynotifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("UnitynotifyIcon.Icon")));
+            this.UnitynotifyIcon.Text = "UnityDownloader";
+            this.UnitynotifyIcon.Visible = true;
+            this.UnitynotifyIcon.MouseClick += new System.Windows.Forms.MouseEventHandler(this.UnitynotifyIcon_MouseClick);
+            // 
+            // ToolcontextMenuStrip
+            // 
+            this.ToolcontextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ExitToolStripMenuItem});
+            this.ToolcontextMenuStrip.Name = "ToolcontextMenuStrip";
+            this.ToolcontextMenuStrip.Size = new System.Drawing.Size(101, 26);
+            // 
+            // ExitToolStripMenuItem
+            // 
+            this.ExitToolStripMenuItem.Image = global::Blackjack_UnityHub.Properties.Resources.Exit;
+            this.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
+            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.ExitToolStripMenuItem.Text = "退出";
+            this.ExitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
+            // 
             // MainUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -166,6 +193,7 @@ namespace Blackjack_UnityHub.GUI
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
+            this.ToolcontextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -181,5 +209,8 @@ namespace Blackjack_UnityHub.GUI
         private System.Windows.Forms.Button Btn_Downlaod;
         private System.Windows.Forms.Label tipsLbl;
         private System.Windows.Forms.Label processLbl;
+        private System.Windows.Forms.NotifyIcon UnitynotifyIcon;
+        private System.Windows.Forms.ContextMenuStrip ToolcontextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem ExitToolStripMenuItem;
     }
 }
