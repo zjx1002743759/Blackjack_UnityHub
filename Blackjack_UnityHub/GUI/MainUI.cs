@@ -151,6 +151,12 @@ namespace Blackjack_UnityHub.GUI
             this.Show();
         }
 
+
+
+        private void update()
+        {
+            Console.WriteLine("修改第一次");
+        }
         /// <summary>
         /// 退出事件.
         /// </summary>
