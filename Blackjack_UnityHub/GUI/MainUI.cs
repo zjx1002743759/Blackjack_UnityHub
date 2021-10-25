@@ -67,6 +67,10 @@ namespace Blackjack_UnityHub.GUI
             }
         }
 
+        private void update() {
+            Console.WriteLine("主分支");
+        }
+
         /// <summary>
         /// 检查更新
         /// </summary>
