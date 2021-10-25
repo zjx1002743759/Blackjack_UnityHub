@@ -162,8 +162,11 @@ namespace Blackjack_UnityHub.GUI
             Application.Exit();
         }
 
-        private void updat额() {
+        private void update() {
             Console.WriteLine("分支1");
+        }
+        private void uodate1() {
+            Console.WriteLine("修改第二次，分支1");
         }
         private void MainUI_Load(object sender, EventArgs e)
         {
